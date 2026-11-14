@@ -9,7 +9,8 @@ Repo: https://github.com/audreyelizabethf/cse134b-hw3
     --color-text: #48273a;
     --color-link: #8a3b62;
     --color-accent: #ffe2eb;
-    --color-accent2: #d4e8c1;
+    /* --color-accent2: #d4e8c1; */
+    --color-accent2: #ffe2eb;
     --color-accent3: #d3e6f7;
     --color-accent4: #e3d9f6;
     --color-focus: #ff0099;
