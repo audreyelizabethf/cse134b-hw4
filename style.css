@@ -47,11 +47,12 @@ main {
 
 h1, h2, h3 {
     font-family: var(--font-heading);
+    margin-bottom: 0;
+    font-weight: 400;
 }
 
 h1 {
     font-size: 5rem;
-    font-weight: 400;
 }
 
 h2 {
@@ -124,6 +125,7 @@ button {
     overflow-x: auto;
     list-style: none;
     padding: 0;
+    margin-top: 0;
 }
 
 /* Child combinator: Each <li> directly inside the New Pieces list on the homepage, styled as a card in a horizontal scroller. */
@@ -134,6 +136,14 @@ button {
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
+}
+
+#browse-heading + piece-card {
+    margin-top: 0;
+}
+
+article, section > h2, h3 {
+    margin-top: 0;
 }
 
 piece-card {
