@@ -49,10 +49,16 @@ h1, h2, h3 {
     font-family: var(--font-heading);
     margin-bottom: 0;
     font-weight: 400;
+    text-align: center;
 }
 
 h1 {
     font-size: 5rem;
+}
+
+main > h1, 
+main > section:not(.panel) > h2 {
+    margin-top: 3rem;
 }
 
 h2 {
@@ -61,6 +67,13 @@ h2 {
 
 h3 {
     font-size: 2rem;
+}
+
+h1 + p,
+h2 + p, 
+h3 + p {
+    text-align: center;
+    margin-top: 0;
 }
 
 img, video,iframe {
