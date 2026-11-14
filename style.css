@@ -3,6 +3,14 @@ Audrey Elizabeth Fernandez | Audrey's Studio stylesheet
 Repo: https://github.com/audreyelizabethf/cse134b-hw3
 */
 
+@font-face {
+    font-family: "Italiana";
+    src: url("fonts/italiana-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* CUSTOM PROPERTIES (at least 4)*/
 :root {
     --color-bg: #fff8ee;
@@ -16,7 +24,7 @@ Repo: https://github.com/audreyelizabethf/cse134b-hw3
     --color-focus: #ff0099;
     
 
-    --font-heading: ui-rounded, "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+    --font-heading: ui-rounded, "Italiana", Georgia, serif;
     --font-body: "Trebuchet MS", "Segoe UI", Helvetica, sans-serif;
 
     --max-width: 60rem;
@@ -43,6 +51,7 @@ h1, h2, h3 {
 
 h1 {
     font-size: 3.25rem;
+    font-weight: 400;
 }
 
 h2 {
