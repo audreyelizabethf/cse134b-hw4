@@ -260,6 +260,12 @@ input, textarea {
     border-radius: 10px;
 }
 
+.required {
+  font-style: italic;
+  font-size: 0.85em;
+  color: #484747;
+}
+
 /* FOOTER */
 footer {
     background-color: var(--color-accent);
