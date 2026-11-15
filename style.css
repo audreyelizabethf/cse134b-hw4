@@ -20,7 +20,7 @@ Repo: https://github.com/audreyelizabethf/cse134b-hw3
     --color-link: #8a3b62;
     --color-accent: #ffe2eb;
     /* --color-accent2: #d4e8c1; */
-    --color-accent2: #ffe2eb;
+    --color-accent2: #dea3be;
     --color-accent3: #d3e6f7;
     --color-accent4: #e3d9f6;
     --color-focus: #77c6ff;
@@ -147,6 +147,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 /* BUTTONS */
 button {
     background-color: var(--color-accent2);
+    color: var(--color-text);
     border: 5px solid var(--color-accent2);
     border-radius: 5px;
     padding:0.5em;
@@ -257,7 +258,7 @@ input, textarea {
     gap: 0.25rem;
 }
 
-.contact-form input,
+.contact-form input:not([type="radio"]),
 .contact-form textarea {
     width: 100%;
     box-sizing: border-box;
@@ -366,4 +367,14 @@ footer {
     .card-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* View transition */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+  header {
+  view-transition-name: site-header;
+}
 }
