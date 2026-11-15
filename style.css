@@ -16,6 +16,7 @@ Repo: https://github.com/audreyelizabethf/cse134b-hw3
     --color-bg: #fff8ee;
     --color-input-bg: #ffffff;
     --color-text: #48273a;
+    --color-text2: #484747;
     --color-link: #8a3b62;
     --color-accent: #ffe2eb;
     /* --color-accent2: #d4e8c1; */
@@ -33,6 +34,23 @@ Repo: https://github.com/audreyelizabethf/cse134b-hw3
 
     --max-width: 60rem;
 }
+
+:root[data-theme="dark"] {
+    --color-bg: #2a1d26;
+    --color-text: #f6e9ef;
+    --color-text2: #e0e0e0;
+    --color-link: #f2a7c8;
+    --color-accent: #4a2f40;
+    --color-accent2: #33402d;
+    --color-accent3: #2b3a4a;
+    --color-accent4: #3a3150;
+    --color-focus: #8cc8ff;
+    --color-input-bg: #3a2a35;
+    --color-error: #ff8a9a;
+    --color-valid: #8fd19e;
+}
+
+#theme-toggle[hidden] { display: none; }
 
 /* TYPOGRAPHY*/
 body {
@@ -267,7 +285,7 @@ input, textarea {
 .required {
   font-style: italic;
   font-size: 0.85em;
-  color: #484747;
+  color: var(--color-text2);
 }
 
 /* Error States for Forms (after user interracts)*/
