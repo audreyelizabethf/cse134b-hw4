@@ -96,5 +96,41 @@ for (const field of fields) {
   // on each bad field before blocking submission
   field.addEventListener("invalid", () => {
     showError(field, field.validationMessage);
+
+    // record this failed attepts field, not the content
+    form_errors.push({
+    field: field.id,
+    message: field.validationMessage,
+    time: new Date().toISOString()
+  });
   });
 }
+
+// Error History
+const form_errors = [];
+const formErrorsField = document.querySelector("#form-errors");
+const form = document.querySelector(".contact-form");
+
+// Recheck every field and counter against contents
+function syncAll() {
+  for (const field of fields) {
+    const message = validateField(field);
+    const errorText = document.querySelector(`#${field.id}-error`);
+    if (errorText.textContent !== "") {
+      showError(field, message);
+    }
+  }
+  updateCounter();
+}
+
+// After the page is shown, including Back/Forward when the browser refills the fields without firing "input"
+window.addEventListener("pageshow", syncAll);
+
+// Right before the browser validates a submit. Pressing Enter in a field also triggers a "click" on the submit button, so this covers keyboard too.
+const submitButton = form.querySelector('button[type="submit"]');
+submitButton.addEventListener("click", syncAll);
+
+// Submit (only when form is valid)
+form.addEventListener("submit", () => {
+  formErrorsField.value = JSON.stringify(form_errors);
+});
