@@ -36,7 +36,7 @@ toggle.hidden = false;
 
 // flip the theme on click, apply then try to save
 toggle.addEventListener("click", () => {
-    const newTheme = root.dataset.theme === "dark" ? "light" : dark;
+    const newTheme = root.dataset.theme === "dark" ? "light" : "dark";
     applyTheme(newTheme);
     saveTheme(newTheme);
 });
