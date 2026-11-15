@@ -23,6 +23,9 @@ Repo: https://github.com/audreyelizabethf/cse134b-hw3
     --color-accent3: #d3e6f7;
     --color-accent4: #e3d9f6;
     --color-focus: #77c6ff;
+
+    --color-error: #f94386;
+    --color-valid: #6db684;
     
 
     --font-heading: ui-rounded, "Italiana", Georgia, serif;
@@ -270,15 +273,15 @@ input, textarea {
 /* Error States for Forms (after user interracts)*/
 .contact-form input:user-invalid,
 .contact-form textarea:user-invalid {
-    border: #f94386;
-    box-shadow: 0 0 0 3px #f94386;
+    border: var(--color-error);
+    box-shadow: 0 0 0 3px var(--color-error);
 }
 
 /* Valid States for Forms (after user interracts)*/
 .contact-form input:user-valid,
 .contact-form textarea:user-valid {
-    border: #6db684;
-    box-shadow: 0 0 0 3px #6db684
+    border: var(--color-valid);
+    box-shadow: 0 0 0 3px var(--color-valid)
 }
 
 /* Character counter base */
@@ -304,6 +307,18 @@ input, textarea {
     background-color: var(--color-accent);
 }
 
+/* Error messages: only non-empty ones take up space or get styling */
+.error-area p {
+  margin: 0;
+}
+
+.error-area p:not(:empty) {
+  margin-top: 0.5rem;
+  padding: 0.25em 0.75em;
+  border-left: 4px solid var(--color-error);
+  color: var(--color-error);
+  font-weight: bold;
+}
 
 /* FOOTER */
 footer {
