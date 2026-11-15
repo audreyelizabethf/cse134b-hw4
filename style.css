@@ -281,6 +281,30 @@ input, textarea {
     box-shadow: 0 0 0 3px #6db684
 }
 
+/* Character counter base */
+.info-area {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0.25em 0.75em;
+    border-left: 4px solid transparent;
+    border-radius: 4px;
+}
+
+/* Near Limit */
+.info-area.warning {
+    color: var(--color-link);
+    font-weight: bold;
+}
+
+/* At Limit */
+.info-area.at-limit {
+    color: var(--color-link);
+    font-weight: bold;
+    border-left-color: var(--color-link);
+    background-color: var(--color-accent);
+}
+
+
 /* FOOTER */
 footer {
     background-color: var(--color-accent);
