@@ -22,7 +22,7 @@ Repo: https://github.com/audreyelizabethf/cse134b-hw3
     --color-accent2: #ffe2eb;
     --color-accent3: #d3e6f7;
     --color-accent4: #e3d9f6;
-    --color-focus: #ff0099;
+    --color-focus: #77c6ff;
     
 
     --font-heading: ui-rounded, "Italiana", Georgia, serif;
@@ -119,7 +119,8 @@ a:hover {
 }
 
 a:focus, button:focus, input:focus, textarea:focus {
-    outline: 3px solid var(--color-focus);    
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;    
 }
 
 /* BUTTONS */
@@ -264,6 +265,20 @@ input, textarea {
   font-style: italic;
   font-size: 0.85em;
   color: #484747;
+}
+
+/* Error States for Forms (after user interracts)*/
+.contact-form input:user-invalid,
+.contact-form textarea:user-invalid {
+    border: #f94386;
+    box-shadow: 0 0 0 3px #f94386;
+}
+
+/* Valid States for Forms (after user interracts)*/
+.contact-form input:user-valid,
+.contact-form textarea:user-valid {
+    border: #6db684;
+    box-shadow: 0 0 0 3px #6db684
 }
 
 /* FOOTER */
