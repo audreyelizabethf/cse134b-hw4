@@ -50,7 +50,15 @@ Repo: https://github.com/audreyelizabethf/cse134b-hw3
     --color-valid: #8fd19e;
 }
 
-#theme-toggle[hidden] { display: none; }
+#theme-toggle[hidden] {
+     display: none;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
 
 /* TYPOGRAPHY*/
 body {
@@ -110,6 +118,7 @@ img, video,iframe {
 header {
     background-color: var(--color-accent);
     padding: 1rem;
+    position: relative;
 }
 
 nav ul{
